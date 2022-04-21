@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('coolvetica\ crammed\ rg.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080707 !important;
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
+header {
+    width: 100%;
+    background: transparent !important;
+    padding: 10px 20px;
+    top: 0;
+    z-index: 998;
+  }
+  
+  header .newNavbar {
+    max-width: 1600px;
+    margin: 0 auto;
+  
+    padding: 0 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo img {
+    width: 100%;
+    margin-left: -2rem;
+  }
+  
+  .hamburguer {
+    width: 30px;
+    height: 30px;
+  
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+  
+    position: relative;
+    cursor: pointer;
+  
+    display: none;
+  }
+  
+  .hamburguer:after {
+    content: "";
+  
+    position: absolute;
+    top: 35%;
+    left: 15%;
+  
+    width: 70%;
+    height: 10%;
+    border-radius: 5px;
+  
+    background: #fff;
+  }
+  
+  .hamburguer::before {
+    content: "";
+  
+    position: absolute;
+    top: 55%;
+    left: 15%;
+  
+    width: 70%;
+    height: 10%;
+    border-radius: 5px;
+  
+    background: #fff;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu li {
+    margin-left: 10px;
+  }
+  
+  .entrar {
+    color: #fff;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    padding: 0.4rem 2rem;
+    transition: ease-in all 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+
+  .entrar:hover {
+     opacity: .5;
+  }
+
+  .entrar img {
+      width: 8%;
+  }
+  
+ 
+  
+  .menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #8a8a8a;
+    transition: ease-in all 0.1s;
+  }
+  
+  .menu li a:hover {
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  @media screen and (min-width: 991px) and (max-width: 1199px) {
+    .menu li a {
+      padding: 0 0.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+    .hamburguer {
+      display: block;
+      z-index: 9998;
+    }
+  
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+      height: 100vh;
+      margin: 0;
+      background-color: #222222;
+  
+      width: 100%;
+      max-width: 250px;
+  
+      padding: 100px 20px;
+      z-index: 999;
+      flex-direction: column;
+      transition: ease all 0.5s;
+    }
+  
+    .menu .entrar {
+      margin-top: 10rem;
+    }
+  
+    .menu.active {
+      right: 0;
+    }
+  }
+
+  main {
+      background: url('../img/bgHero.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 2rem 0;
+      padding-bottom: 4rem;
+  }
+  
+  main .texto {
+      padding-top: 5rem;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff;
+  }
+
+  main .texto h1 {
+      color: #c6041d;
+      font-size: 5rem;
+      font-family: 'Coolvetica', sans-serif !important;
+      letter-spacing: 10px;
+      line-height: 3.5rem;
+  }
+
+  main .texto p {
+      font-size: 1rem;
+      font-weight: 600;
+  }
+
+  main .texto button {
+      background: #e30320;
+      color: #ffffff;
+      border: none;
+      filter: drop-shadow(0 0 0px #db3eb1) drop-shadow(0 0 20px #e30320) ;
+      width: 40%;
+      font-size: .9rem;
+      font-weight: 600;
+      height: 2rem;
+      border-radius: 5px;
+      position: relative;
+      animation: pulse .8s infinite;
+      outline: none;
+      
+  }
+
+
+  main .texto .escola {
+    padding-top: 1rem;
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 991px) {
+
+    main .texto {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main .texto .video iframe {
+        width: 90%;
+        height: 40vh;
+        border-radius: 20px;
+    }
+
+    main .texto .botao button {
+        width: 90%;
+
+    }
+
+  }
+
+  @media screen and (min-width: 992px) {
+    main .texto .video iframe {
+        width: 100%;
+        height: 50vh;
+        border-radius: 20px;
+    }
+  }
+
+  @keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+  }
+
+  #pilar1 {
+      background: url('../img/bgPilar.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 5rem 0;
+  }
+
+  #pilar1 img {
+      width: 90%;
+  }
+
+  #pilar1 .texto {
+    color: #ffffff;
+    width: 70%;
+  }
+
+  #pilar1 .texto h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 80%;
+  }
+
+  #pilar1 .texto h4 {
+    padding-top: 3rem;
+    letter-spacing: 5px;
+    font-weight: 600;
+    line-height: 0;
+  }
+
+  #pilar1 .texto h1 {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    line-height: 5rem;
+  }
+
+  #pilar1 .texto  .black {
+    color: #151515;
+    font-weight: 800;
+  }
+
+  #pilar1 .texto p {
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 991px) {
+
+    #pilar1 {
+      background: url('../img/bgPilar.png');
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+    }
+
+    #pilar1 .texto {
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #pilar1 .imagem {
+      text-align: center;
+    }
+    
+    #pilar1 .texto h3 {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+
+  }
+
+
+  #pilar2 {
+    padding: 5rem 0;
+    color: #fff;
+  }
+
+  #pilar2 img {
+    width: 80%;
+}
+
+#pilar2 .texto {
+  color: #ffffff;
+  width: 70%;
+}
+
+#pilar2 .texto h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 80%;
+}
+
+#pilar2 .texto h4 {
+  padding-top: 3rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 0;
+}
+
+#pilar2 .texto h1 {
+  font-family: 'Coolvetica', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  line-height: 5rem;
+}
+
+#pilar2 .texto  .red {
+  color: #e30320;
+  font-weight: 700;
+}
+
+#pilar2 .texto p {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+#pilar2 .bullet {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#pilar2 .bullet p {
+  padding-top: .8rem;
+  padding-left: .5rem;
+  font-weight: 600;
+}
+
+#pilar2 .bullet img {
+  width: 3%;
+  height: .5%;
+}
+
+@media screen and (max-width: 991px) {
+  #pilar2 .texto {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #pilar2 .bullet {
+    justify-content: center;
+  }
+
+  #pilar2 .imagem {
+    text-align: center;
+  }
+
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+#pilar2 .cursos h1 {
+  text-align: center;
+  font-family: 'Coolvetica', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 5px;
+}
+
+#pilar2 .cursos img {
+  width: auto;
+  transition: all ease-in .3s;
+  margin: 0 auto;
+}
+
+#pilar2 .cursos .swiper-slide {
+  text-align: center;
+}
+
+
+
+#pilar2 .cursos .swiper-scrollbar {
+  background: #e30320;
+  width: 30%;
+  margin-left: 30%;
+  margin-top: 10%;
+  filter: drop-shadow(0 0 30px #e30320) drop-shadow(0 0 30px #e30320)  !important;
+
+}
+
+#pilar3 {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+#pilar3 .imagem img {
+  width: 90%;
+}
+
+#pilar3 .texto {
+  color: #1d1d1b;
+  width: 70%;
+  padding-top: 4rem;
+}
+
+#pilar3 .texto h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 80%;
+}
+
+#pilar3 .texto h4 {
+  padding-top: 3rem;
+  letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 0;
+}
+
+#pilar3 .texto h1 {
+  font-family: 'Coolvetica', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  line-height: 5rem;
+}
+
+#pilar3 .texto  .red {
+  color: #e30320;
+  font-weight: 700;
+}
+
+#pilar3 .texto p {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+#pilar3 .texto .botao button {
+  background: #000000;
+  color: #ffffff;
+  border: 0;
+  text-align: center;
+  width: 50%;
+  height: 5.5vh;
+  font-weight: 600;
+  transition: all ease-in .3s;
+}
+
+#pilar3 .texto .botao button:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 991px) {
+  #pilar3 .texto {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #pilar3 .imagem {
+    text-align: center;
+  }
+
+  #pilar3 .imagem img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #pilar3 .texto .botao button {
+    width: 100%;
+    height: 8vh;
+  }
+
+
+}
+
+#programa {
+  background: url('../img/bgPrograma.png'), #000000;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: top center;
+  padding: 7rem 0;
+  color: #ffffff;
+}
+
+#programa .titulo {
+  text-align: center;
+}
+
+#programa .titulo h1 {
+  font-family: 'Coolvetica', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 15px;
+  line-height: 3rem;
+}
+
+#programa .titulo h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+#programa .cards {
+  text-align: center;
+  padding: 5rem 0;
+  padding-top: 8rem;
+}
+
+#programa .newCard {
+  background: rgba(154, 11, 11, 0.166);
+  border-radius: 20px;
+  padding: 1rem;
+  padding-top: 3rem;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+#programa .newCard .imagem1 img {
+  position: absolute;
+  top: -40%;
+  left: 25%;
+  right: 0%;
+  width: 50%;
+}
+
+#programa .newCard .imagem2 img {
+  position: absolute;
+  top: -40%;
+  left: 30%;
+  right: 0%;
+  width: 35%;
+}
+
+
+#programa .newCard .imagem3 img {
+  position: absolute;
+  top: -40%;
+  left: 35%;
+  right: 0%;
+  width: 30%;
+}
+
+#programa .newCard h3 {
+  color: #e30320;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#programa .newCard p {
+  width: 65%;
+  margin: 0 auto;
+}
+
+#programa p {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
+
+#programa .botao {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#programa .botao button {
+  background: #e30320;
+  color: #ffffff;
+  border: none;
+  filter: drop-shadow(0 0 0px #db3eb1) drop-shadow(0 0 20px #e30320) ;
+  width: 20%;
+  font-size: .9rem;
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 5px;
+  position: relative;
+  outline: none;
+  transition: all ease-in .3s;
+}
+
+#programa .botao button:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 991px) {
+  #programa .titulo h1 {
+    line-height: 4rem;
+  }
+
+  #programa .newCard {
+    margin-bottom: 8rem;
+  }
+
+  #programa .last {
+    margin-bottom: 0;
+  }
+
+  #programa .texto {
+    width: 90%;
+  }
+
+  #programa .botao button {
+    width: 90%;
+  }
+
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 991px){
+  #programa .newCard img {
+    display: none;
+  }
+}
+
+footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 2rem 0;
+
+}
+
+
+footer .copyright {
+  padding-top: 1rem;
+  width: 70%;
+  font-weight: 600;
+}
+
+footer .icons {
+  text-align: right;
+  padding-top: 2rem;
+}
+
+footer .icons img {
+  width: 5%;
+  padding-right: .5rem;
+  transition: all ease-in .3s;
+}
+
+footer .icons img:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 991px) {
+  footer .icons {
+    display: none;
+  }
+
+  footer .copyright {
+    display: none;
+  }
+
+  footer .logo {
+    text-align: center;
+  }
+
+  footer .logo img {
+    width: 50%;
+  }
+
+}
+
+
+@media screen and (max-width: 340px) {
+  #pilar1 .texto h1 {
+    font-size: 3rem;
+  }
+
+  #pilar2 .texto h1 {
+    font-size: 3rem;
+  }
+
+  #pilar3 .texto h1 {
+    font-size: 3rem;
+  }
+
+}
